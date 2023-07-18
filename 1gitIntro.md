@@ -23,7 +23,7 @@ Set your username and email address. Git will use this information to identify w
 To make the pwd a git repository:
 > ```git init```
 
-==.git folder== contain hidden files which stores all the history and details of the project.
+==.git folder== contain hidden files which stores all the history and details of the git repository (project).
 To find *.git folder* use:
 > ```ls -a``` -> This shows all the hidden folders in the pwd.
 
@@ -37,17 +37,14 @@ To checkout the contents of .git folder : ```ls .git```
 The stages of a file being tracked by Git :
 1. COMMITTED STATE
 A file is in the committed state when all the changes made to the file have been saved in the local repo. Files in the committed stage are files ready to be pushed to the remote repo (on GitHub).
-2. MODIFIED STATE
+2. <span style="color: red">MODIFIED STATE</span>
 A file in the modified state has some changes made to it but it's not yet saved. This means that the state of the file has been altered from its previous committed state.
-3. STAGED STATE
+3. <span style="color: green">STAGED STATE</span>
 A file in the staged state means it is ready to be committed. In this state, all necessary changes have been made so the next step is to move the file to the commit state.
 
 <span style="color: red">Untracked files (in red color) :</span>
 * No one in the outer world (other than my system) knows that those files exist in the repository.
 * There's no history of that file.
-
-<span style="color: red"> Modified : </span>
-* changes made in the file is to be tracked.
 
 **5. Staging the files :**
 Staging a file means that the history of the file will now be tracked by Git. The file is ready to be committed.
@@ -72,6 +69,7 @@ Committing the changes means saving the changes/progress of a particular project
 
 **7. To view the history of the project :**
 > ```git log```
+Press 'q' to exit
 
 It displays all the commits made to the project with there hash IDs in case we need to revert back to that commit/version of the project.
 
@@ -127,30 +125,6 @@ Refresh the browser to see the changes!
 
 *Note: It is advisible to first create a new repository in Github and then link its URL to your system's repository.* 
 
-#### BRANCHES IN GIT
-Ref: https://learngitbranching.js.org/
-* By default the working branch is =='main'== (previously called 'master').
-* Always create a new branch while making changes in the project (working on new features, removing bug etc).
-* You should NEVER commit on main branch, as it is the production branch i.e., used by public so that any error in our new untested code do not effect the main branch.
-* All code that are not finalized should go on a separate branch so that users of main branch (public) is not affected.
-
-> To create a new branch:
->```git branch branchName```
-
-> To move the Head to a particular branch:
->```git checkout branchName```
-
-Now the Head is pointing to that particular branch.
-The 'Head' is just a pointer which represents that all new changes will be made to the Head (i.e., the branch it is pointing to, can be 'main' or any other branch).
-Thus, any commit made now will affect only that particular branch pointed by the 'Head'.
-
-> Going back to main branch:
->```git checkout main```
-
-**Merging a branch with the main branch :**
-This is done after testing and finalizing changes for the users to see.
->```git merge branchName```
----
 #### WORKING WITH EXISTING PROJECTS
 
 1. You cannot directly make changes to anyone's project (Github repository). You have to create a fork from the original project Github repository. 

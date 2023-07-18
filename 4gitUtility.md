@@ -8,11 +8,8 @@ which contains username and user.email
 >```git config --list```
 Press 'q' to exit the list
 
->```git config user.name```
-View username
-
->```git config user.email```
-View user email
+>```git config user.name```     // View username
+>```git config user.email```    // View user email
 
 
 
