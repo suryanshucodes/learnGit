@@ -7,12 +7,11 @@ This command returns a simple listing of your current branches.
 The ```*``` character that prefixes a branch indicates that you currently have checked out that branch (i.e., the branch that ```HEAD``` points to). This means that if you commit at this point, that branch will be moved forward with your new work.
 
 >```git branch -v```
-
 Returns the last commit on each branch.
 
 >```git branch --merged```
-
 To see which branches are already merged into the branch you're currently on.
+
 Branches on this list without the ```*``` in front of them are generally fine to delete with ```git branch -d branchName```; you’ve already incorporated their work into another branch, so you’re not going to lose anything.
 
 >```git branch --no-merged```
